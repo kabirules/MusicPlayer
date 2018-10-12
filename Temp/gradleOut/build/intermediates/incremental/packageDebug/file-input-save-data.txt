@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Oct 12 16:28:14 CEST 2018
+#Fri Oct 12 17:13:05 CEST 2018
 122.file=E\:\\Disco F\\Unity\\MusicPlayer\\Temp\\gradleOut\\build\\intermediates\\assets\\debug\\bin\\Data\\Managed\\UnityEngine.UIModule.dll
 60.set=ASSET
 129.file=E\:\\Disco F\\Unity\\MusicPlayer\\Temp\\gradleOut\\build\\intermediates\\assets\\debug\\bin\\Data\\Managed\\UnityEngine.UnityWebRequestModule.dll

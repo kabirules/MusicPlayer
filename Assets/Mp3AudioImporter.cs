@@ -2,14 +2,17 @@
  using System.Collections;
  using System.Collections.Generic;
  using System.IO;
- 
- [RequireComponent(typeof(AudioSource))]
+using UnityEngine.UI;
+
+[RequireComponent(typeof(AudioSource))]
  public class Mp3AudioImporter : MonoBehaviour {
      
      private List<AudioClip> audioClips;
-     private const string musicDir = "/";
+     private const string musicDir = "/storage/emulated/0/Music";
+	 // private const string musicDir = "/storage/emulated/0/Music";
 
 	 public AudioSource audio;
+	 public Text songText;
          
      void Start()
      {
@@ -24,7 +27,7 @@
 		
 		foreach(string song in playlist)
 		{
-			Debug.Log("file://" + song);
+			songText.text = Directory.GetCurrentDirectory();
 			WWW audioLoader = new WWW("file:///" + song);
 			
 			while( !audioLoader.isDone )
