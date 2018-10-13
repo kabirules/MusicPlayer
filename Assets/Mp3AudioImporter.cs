@@ -8,8 +8,8 @@ using UnityEngine.UI;
  public class Mp3AudioImporter : MonoBehaviour {
      
      private List<AudioClip> audioClips;
-     private const string musicDir = "/storage/emulated/0/Ringtones";
-	 // private const string musicDir = "c:/";
+     // private const string musicDir = "/storage/emulated/0/Ringtones";
+	 private const string musicDir = "c:/";
 
 	 public AudioSource audio;
 	 public Text songText;
