@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 0}
+  songText: {fileID: 1949326528}
 --- !u!82 &519420034
 AudioSource:
   m_ObjectHideFlags: 0

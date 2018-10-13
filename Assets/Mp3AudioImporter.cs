@@ -8,14 +8,15 @@ using UnityEngine.UI;
  public class Mp3AudioImporter : MonoBehaviour {
      
      private List<AudioClip> audioClips;
-     private const string musicDir = "/storage/emulated/0/Music";
-	 // private const string musicDir = "/storage/emulated/0/Music";
+     private const string musicDir = "/storage/emulated/0/Ringtones";
+	 // private const string musicDir = "c:/";
 
 	 public AudioSource audio;
 	 public Text songText;
          
      void Start()
      {
+		songText.text = Directory.GetCurrentDirectory();
 		this.audio = GetComponent<AudioSource>();
 		audioClips = new List<AudioClip>();
 		StartCoroutine("PlayAudioList");
@@ -27,7 +28,7 @@ using UnityEngine.UI;
 		
 		foreach(string song in playlist)
 		{
-			songText.text = Directory.GetCurrentDirectory();
+			songText.text = song;
 			WWW audioLoader = new WWW("file:///" + song);
 			
 			while( !audioLoader.isDone )
