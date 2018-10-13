@@ -13,6 +13,9 @@ using UnityEngine.UI;
 
 	 public AudioSource audio;
 	 public Text songText;
+	 public Button songButton;
+	 public GameObject scrollViewContent;
+	 private string song; 
          
      void Start()
      {
@@ -29,6 +32,11 @@ using UnityEngine.UI;
 		foreach(string song in playlist)
 		{
 			songText.text = song;
+			this.song = song;
+			Button button = Instantiate(songButton) as Button;
+			button.transform.SetParent(scrollViewContent.transform,false);
+			button.GetComponentInChildren<Text>().text = song.Substring(song.IndexOf("/")+1);
+			button.onClick.AddListener(delegate{StartCoroutine(LoadSong(song)); });
 			WWW audioLoader = new WWW("file:///" + song);
 			
 			while( !audioLoader.isDone )
@@ -43,6 +51,7 @@ using UnityEngine.UI;
 	{    
 		yield return StartCoroutine("DownloadPlaylist");
 
+/*
 		foreach(AudioClip song in audioClips)
 		{
 			this.audio.clip = song;
@@ -50,5 +59,21 @@ using UnityEngine.UI;
 			Debug.Log("Here I am -> " + song.name);
 			yield return new WaitForSeconds(song.length + 1.0f);
 		}
+*/		
+	}
+
+	public IEnumerator LoadSong(string song) {
+		yield return StartCoroutine(SetSongInAudioList(song));
+		Debug.Log(song);
+		this.audio.clip = audioClips[0];
+		this.audio.Play();		
+	}
+
+	IEnumerator SetSongInAudioList(string song) {
+		audioClips.Clear();
+		WWW audioLoader = new WWW("file:///" + song);
+		while( !audioLoader.isDone )
+			yield return null;
+		audioClips.Add(audioLoader.GetAudioClip(false));
 	}
  }
