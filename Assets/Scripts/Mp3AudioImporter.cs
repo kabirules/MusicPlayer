@@ -1,8 +1,9 @@
-﻿ using UnityEngine;
- using System.Collections;
- using System.Collections.Generic;
- using System.IO;
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine.UI;
+using System;
 
 [RequireComponent(typeof(AudioSource))]
  public class Mp3AudioImporter : MonoBehaviour {
@@ -43,7 +44,7 @@ using UnityEngine.UI;
 				yield return null;
 			
 			audioClips.Add(audioLoader.GetAudioClip(false));
-		}    
+		}
 	}
          
          
@@ -75,5 +76,20 @@ using UnityEngine.UI;
 		while( !audioLoader.isDone )
 			yield return null;
 		audioClips.Add(audioLoader.GetAudioClip(false));
+	}
+
+	public void EmptyScrollView()
+	{
+		foreach (Transform child in scrollViewContent.transform) {
+			GameObject.Destroy(child.gameObject);
+		}
+	}
+
+	public void GetDirectories() {
+		var directories = Directory.GetDirectories("c:/", "*");
+		foreach (string currentDir in directories)
+		{
+			Debug.Log(currentDir);
+		}
 	}
  }
