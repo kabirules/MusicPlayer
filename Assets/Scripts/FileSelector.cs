@@ -17,7 +17,14 @@ public class FileSelector : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+#if UNITY_ANDROID
+		Debug.Log("Unity_Android");
+		this.currentDir = "/";
+#endif
+#if UNITY_EDITOR
+		Debug.Log("Unity_Editor");
 		this.currentDir = "c:/";
+#endif
 		this.BuildFileSystem();
 	}
 	
@@ -48,7 +55,8 @@ public class FileSelector : MonoBehaviour {
 			button.transform.SetParent(scrollViewContent.transform,false);
 			button.GetComponentInChildren<Text>().text = file.Substring(file.IndexOf("/")+1);
 			button.onClick.AddListener(delegate{ShowFile(file); });
-		}		
+		}
+		this.scrollViewContent.transform.position = new Vector2(this.scrollViewContent.transform.position.x, -99999f);
 	}
 
 	public void UpDirectory() {
@@ -62,15 +70,20 @@ public class FileSelector : MonoBehaviour {
 	}
 
 	public void EnterDirectory(string directory) {
-		string newDir = directory;
-		Debug.Log(newDir);
-		this.currentDir = newDir;
-		this.EmptyScrollView();
-		this.BuildFileSystem();
+		try {
+			string newDir = directory;
+			Debug.Log(newDir);
+			this.currentDir = newDir;
+			this.EmptyScrollView();
+			this.BuildFileSystem();
+		} catch (Exception e) {
+			Debug.Log(e); //TODO Show error message somehow to the user
+			this.UpDirectory();
+		}
 	}
 
 	public void ShowFile(string file) {
-		Debug.Log(file);
+		Debug.Log(file); //TODO Do something with the file
 	}	
 
 	public void EmptyScrollView()
