@@ -14,12 +14,13 @@ public class FileSelector : MonoBehaviour {
 
 	public Button fileButton; // Prefab
 	public GameObject scrollViewContent;
+	public Text currentFolderText;
 
 	// Use this for initialization
 	void Start () {
 #if UNITY_ANDROID
 		Debug.Log("Unity_Android");
-		this.currentDir = "/";
+		this.currentDir = "/storage/emulated/0/";
 #endif
 #if UNITY_EDITOR
 		Debug.Log("Unity_Editor");
@@ -27,6 +28,7 @@ public class FileSelector : MonoBehaviour {
 #endif
 		this.BuildFileSystem();
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -34,6 +36,7 @@ public class FileSelector : MonoBehaviour {
 	}
 
 	private void BuildFileSystem() {
+		currentFolderText.text = this.currentDir;
 		this.directories = Directory.GetDirectories(this.currentDir, "*");
 		this.files = Directory.GetFiles(this.currentDir, "*");
 		if (!this.currentDir.Equals("c:/")) {
@@ -50,7 +53,6 @@ public class FileSelector : MonoBehaviour {
 			button.onClick.AddListener(delegate {EnterDirectory(directoryModded); });
 		}
 		foreach (string file in this.files) {
-			// file.Replace("\\", "/");
 			Button button = Instantiate(fileButton) as Button;
 			button.transform.SetParent(scrollViewContent.transform,false);
 			button.GetComponentInChildren<Text>().text = file.Substring(file.IndexOf("/")+1);
