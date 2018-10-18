@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\FileSelector.cs" />
      <Compile Include="Assets\Scripts\Mp3AudioImporter.cs" />
      <Compile Include="Assets\Scripts\PanelOpen.cs" />
+     <Compile Include="Assets\Scripts\PanelOpener.cs" />
      <None Include="Assets\Almgp_particle_vol_1\shaders\emmision_particle.shader" />
      <None Include="Assets\Almgp_particle_vol_1\shaders\multypower_particle.shader" />
      <None Include="Assets\Almgp_particle_vol_1\README.txt" />

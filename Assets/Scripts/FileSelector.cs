@@ -11,10 +11,15 @@ public class FileSelector : MonoBehaviour {
 	private string[] files;
 	private string upDirectory;	
 	private string currentDir;
+	public AudioSource audioSource;
 
 	public Button fileButton; // Prefab
 	public GameObject scrollViewContent;
 	public Text currentFolderText;
+
+	public GameObject fileLoadPanel;
+	public GameObject playerPanel;
+	public Text songText;	
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +31,7 @@ public class FileSelector : MonoBehaviour {
 		Debug.Log("Unity_Editor");
 		this.currentDir = "c:/";
 #endif
+		this.audioSource = GetComponent<AudioSource>();
 		this.BuildFileSystem();
 	}
 
@@ -38,7 +44,7 @@ public class FileSelector : MonoBehaviour {
 	private void BuildFileSystem() {
 		currentFolderText.text = this.currentDir;
 		this.directories = Directory.GetDirectories(this.currentDir, "*");
-		this.files = Directory.GetFiles(this.currentDir, "*");
+		this.files = Directory.GetFiles(this.currentDir, "*.mp3");
 		if (!this.currentDir.Equals("c:/")) {
 			Button button = Instantiate(fileButton) as Button;
 			button.transform.SetParent(scrollViewContent.transform,false);
@@ -56,7 +62,7 @@ public class FileSelector : MonoBehaviour {
 			Button button = Instantiate(fileButton) as Button;
 			button.transform.SetParent(scrollViewContent.transform,false);
 			button.GetComponentInChildren<Text>().text = file.Substring(file.IndexOf("/")+1);
-			button.onClick.AddListener(delegate{ShowFile(file); });
+			button.onClick.AddListener(delegate{StartCoroutine(ManageFile(file)); });
 		}
 		this.scrollViewContent.transform.position = new Vector2(this.scrollViewContent.transform.position.x, -99999f);
 	}
@@ -84,8 +90,16 @@ public class FileSelector : MonoBehaviour {
 		}
 	}
 
-	public void ShowFile(string file) {
+	IEnumerator ManageFile(string file) {
 		Debug.Log(file); //TODO Do something with the file
+		this.fileLoadPanel.SetActive(false);
+		this.playerPanel.SetActive(true);
+		this.songText.text = file.Substring(file.LastIndexOf("/")+1,file.LastIndexOf(".")-3);
+		// As it has to be an mp3, load the AudioSource.
+		WWW audioLoader = new WWW("file:///" + file);
+		while( !audioLoader.isDone )
+			yield return null;
+		this.audioSource.clip = audioLoader.GetAudioClip(false);
 	}	
 
 	public void EmptyScrollView()
@@ -93,5 +107,13 @@ public class FileSelector : MonoBehaviour {
 		foreach (Transform child in scrollViewContent.transform) {
 			GameObject.Destroy(child.gameObject);
 		}
+	}
+
+	public void PlaySong() {
+		this.audioSource.Play();
+	}
+
+	public void StopSong() {
+		this.audioSource.Stop();
 	}	
 }
