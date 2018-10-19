@@ -19,7 +19,13 @@ public class FileSelector : MonoBehaviour {
 
 	public GameObject fileLoadPanel;
 	public GameObject playerPanel;
-	public Text songText;	
+	public Text songText;
+
+	// Particles
+	public ParticleSystem particle1;	
+	public ParticleSystem particle2;
+	public ParticleSystem particle3;
+	public ParticleSystem particle4;
 
 	// Use this for initialization
 	void Start () {
@@ -110,10 +116,36 @@ public class FileSelector : MonoBehaviour {
 	}
 
 	public void PlaySong() {
+		this.PlayRandomParticle();
 		this.audioSource.Play();
 	}
 
 	public void StopSong() {
+		this.StopAllParticles();
 		this.audioSource.Stop();
-	}	
+	}
+
+	private void PlayRandomParticle() {
+		this.StopAllParticles();
+		int rndInteger =  UnityEngine.Random.Range(1, 5);
+		Debug.Log(rndInteger);
+		if (rndInteger == 1) {
+			this.particle1.Play();	
+		} else if (rndInteger == 2) {
+			this.particle2.Play();
+		} else if (rndInteger == 3) {
+			this.particle3.Play();
+		} else if (rndInteger == 4) {
+			this.particle4.Play();
+		} else {
+			Debug.Log("I shouldn't be here...");
+		}
+	}
+
+	private void StopAllParticles() {
+		this.particle1.Stop();
+		this.particle2.Stop();
+		this.particle3.Stop();
+		this.particle4.Stop();
+	}
 }

@@ -22,4 +22,9 @@ public class PanelOpener : MonoBehaviour {
 		this.fileLoadPanel.SetActive(true);
 		this.playerPanel.SetActive(false);
 	}
+
+	public void ClosePanel() {
+		this.fileLoadPanel.SetActive(false);
+		this.playerPanel.SetActive(true);		
+	}
 }
