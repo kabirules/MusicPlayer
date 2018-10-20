@@ -32,6 +32,7 @@ public class FileSelector : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Screen.sleepTimeout = SleepTimeout.NeverSleep;
 #if UNITY_ANDROID
 		Debug.Log("Unity_Android");
 		this.currentDir = "/storage/emulated/0/";
@@ -48,6 +49,9 @@ public class FileSelector : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetKey("escape")) {
+            Application.Quit();
+        }		
 		if (this.audioSource &&
 			this.audioSource.isPlaying) {
 
@@ -114,10 +118,9 @@ public class FileSelector : MonoBehaviour {
 	}
 
 	IEnumerator ManageFile(string file) {
-		Debug.Log(file); //TODO Do something with the file
 		this.fileLoadPanel.SetActive(false);
 		this.playerPanel.SetActive(true);
-		this.songText.text = file.Substring(file.LastIndexOf("/")+1,file.LastIndexOf(".")-3);
+		this.songText.text = file.Substring(file.LastIndexOf("/")+1); // TODO remove file extension 
 		// As it has to be an mp3, load the AudioSource.
 		WWW audioLoader = new WWW("file:///" + file);
 		while( !audioLoader.isDone )
@@ -169,8 +172,6 @@ public class FileSelector : MonoBehaviour {
 	}
 
 	void UpdateEverySecond() {
-		Debug.Log(1f / this.audioSource.clip.length);
 		this.slider.normalizedValue = this.slider.normalizedValue + 1f / this.audioSource.clip.length;
-		Debug.Log(this.slider.normalizedValue);
 	}
 }
