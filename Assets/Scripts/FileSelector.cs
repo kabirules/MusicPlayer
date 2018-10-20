@@ -20,12 +20,15 @@ public class FileSelector : MonoBehaviour {
 	public GameObject fileLoadPanel;
 	public GameObject playerPanel;
 	public Text songText;
+	public Slider slider;
 
 	// Particles
 	public ParticleSystem particle1;	
 	public ParticleSystem particle2;
 	public ParticleSystem particle3;
 	public ParticleSystem particle4;
+
+	private int nextUpdate = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -37,6 +40,7 @@ public class FileSelector : MonoBehaviour {
 		Debug.Log("Unity_Editor");
 		this.currentDir = "c:/";
 #endif
+		this.slider.normalizedValue = 0;
 		this.audioSource = GetComponent<AudioSource>();
 		this.BuildFileSystem();
 	}
@@ -44,6 +48,19 @@ public class FileSelector : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (this.audioSource &&
+			this.audioSource.isPlaying) {
+
+			if (Time.time >= nextUpdate){
+				// Debug.Log(Time.time+">="+nextUpdate);
+				// Change the next update (current second+1)
+				nextUpdate=Mathf.FloorToInt(Time.time)+1;
+				// Call your fonction
+				this.UpdateEverySecond();
+			}
+		} else {
+			this.StopAllParticles();
+		}
 		
 	}
 
@@ -116,16 +133,18 @@ public class FileSelector : MonoBehaviour {
 	}
 
 	public void PlaySong() {
+		this.slider.normalizedValue = 0f;
 		this.PlayRandomParticle();
 		this.audioSource.Play();
 	}
 
 	public void StopSong() {
+		this.slider.normalizedValue = 0f;
 		this.StopAllParticles();
 		this.audioSource.Stop();
 	}
 
-	private void PlayRandomParticle() {
+	public void PlayRandomParticle() {
 		this.StopAllParticles();
 		int rndInteger =  UnityEngine.Random.Range(1, 5);
 		Debug.Log(rndInteger);
@@ -147,5 +166,11 @@ public class FileSelector : MonoBehaviour {
 		this.particle2.Stop();
 		this.particle3.Stop();
 		this.particle4.Stop();
+	}
+
+	void UpdateEverySecond() {
+		Debug.Log(1f / this.audioSource.clip.length);
+		this.slider.normalizedValue = this.slider.normalizedValue + 1f / this.audioSource.clip.length;
+		Debug.Log(this.slider.normalizedValue);
 	}
 }
