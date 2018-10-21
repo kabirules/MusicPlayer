@@ -241,7 +241,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/GroovePlay/GroovePlay.keystore
+  AndroidKeystoreName: E:/Disco F/AndroidJaviFontAdmob/GroovePlay/GroovePlay.keystore
   AndroidKeyaliasName: grooveplay
   AndroidTVCompatibility: 1
   AndroidIsGame: 1

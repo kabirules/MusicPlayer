@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Development/Unity/MusicPlayer/MusicPlayer.apk
+E:/Disco F/Unity/MusicPlayer/MusicPlayer.apk
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
 SceneListEnd?
