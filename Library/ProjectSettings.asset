@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: Javier Font
   productName: GroovePlay
-  defaultCursor: {fileID: 2800000, guid: 711992390a75fcb4fb9f5d4fac22f1f3, type: 3}
+  defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
@@ -241,8 +241,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: E:/Disco F/AndroidJaviFontAdmob/GroovePlay/GroovePlay.keystore
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: D:/GroovePlay/GroovePlay.keystore
+  AndroidKeyaliasName: grooveplay
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0
