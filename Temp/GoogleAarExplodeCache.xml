@@ -1,0 +1,206 @@
+<aars>
+  <explodeData>
+    <aar>android.arch.core.common-1.0.0</aar>
+    <modificationTime>0001-01-01T00:00:00.0000000+01:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/android.arch.core.common-1.0.0.jar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>android.arch.lifecycle.common-1.0.0</aar>
+    <modificationTime>0001-01-01T00:00:00.0000000+01:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/android.arch.lifecycle.common-1.0.0.jar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>android.arch.lifecycle.runtime-1.0.0</aar>
+    <modificationTime>2018-10-22T23:18:30.9761659+02:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/android.arch.lifecycle.runtime-1.0.0.aar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>com.android.support.customtabs-26.1.0</aar>
+    <modificationTime>2018-10-22T23:18:31.0011673+02:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/com.android.support.customtabs-26.1.0.aar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>com.android.support.support-annotations-26.1.0</aar>
+    <modificationTime>0001-01-01T00:00:00.0000000+01:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/com.android.support.support-annotations-26.1.0.jar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>com.android.support.support-compat-26.1.0</aar>
+    <modificationTime>2018-10-22T23:18:31.0521703+02:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/com.android.support.support-compat-26.1.0.aar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>com.android.support.support-core-ui-26.1.0</aar>
+    <modificationTime>2018-10-22T23:18:31.0881723+02:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/com.android.support.support-core-ui-26.1.0.aar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>com.android.support.support-core-utils-26.1.0</aar>
+    <modificationTime>2018-10-22T23:18:31.1051733+02:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/com.android.support.support-core-utils-26.1.0.aar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>com.android.support.support-fragment-26.1.0</aar>
+    <modificationTime>2018-10-22T23:18:31.1291747+02:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/com.android.support.support-fragment-26.1.0.aar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>com.android.support.support-media-compat-26.1.0</aar>
+    <modificationTime>2018-10-22T23:18:31.1471757+02:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/com.android.support.support-media-compat-26.1.0.aar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>com.android.support.support-v4-26.1.0</aar>
+    <modificationTime>2018-10-22T23:18:31.1651767+02:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/com.android.support.support-v4-26.1.0.aar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>com.google.android.gms.play-services-ads-15.0.1</aar>
+    <modificationTime>2018-10-22T23:18:31.2021788+02:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/com.google.android.gms.play-services-ads-15.0.1.aar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>com.google.android.gms.play-services-ads-base-15.0.1</aar>
+    <modificationTime>2018-10-22T23:18:31.2231800+02:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/com.google.android.gms.play-services-ads-base-15.0.1.aar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>com.google.android.gms.play-services-ads-identifier-15.0.1</aar>
+    <modificationTime>2018-10-22T23:18:31.2331806+02:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-15.0.1.aar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>com.google.android.gms.play-services-ads-lite-15.0.1</aar>
+    <modificationTime>2018-10-22T23:18:31.2471814+02:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-15.0.1.aar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>com.google.android.gms.play-services-basement-15.0.1</aar>
+    <modificationTime>2018-10-22T23:18:31.2621823+02:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/com.google.android.gms.play-services-basement-15.0.1.aar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>com.google.android.gms.play-services-gass-15.0.1</aar>
+    <modificationTime>2018-10-22T23:18:31.2751830+02:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.javifont.grooveplay</bundleId>
+    <path>Assets/Plugins/Android/com.google.android.gms.play-services-gass-15.0.1.aar</path>
+    <availableAbis>universal</availableAbis>
+    <targetAbi>armeabi-v7a,x86</targetAbi>
+    <gradleBuildEnabled>true</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+</aars>
