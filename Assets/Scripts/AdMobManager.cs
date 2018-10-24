@@ -11,8 +11,8 @@ public class AdMobManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         #if UNITY_ANDROID
-            string appId = "ca-app-pub-3940256099942544~3347511713"; // TEST
-			// string appId = "ca-app-pub-2228911308495304~3604820553"; // LIVE
+            // string appId = "ca-app-pub-3940256099942544~3347511713"; // TEST
+			string appId = "ca-app-pub-2228911308495304~3604820553"; // LIVE
 			
         #elif UNITY_IPHONE
             string appId = "ca-app-pub-3940256099942544~1458002511"; // TEST
@@ -35,8 +35,8 @@ public class AdMobManager : MonoBehaviour {
     private void RequestBanner()
     {
         #if UNITY_ANDROID
-            string adUnitId = "ca-app-pub-3940256099942544/6300978111"; // TEST
-			// string adUnitId = "ca-app-pub-2228911308495304/3436465445"; // LIVE
+            // string adUnitId = "ca-app-pub-3940256099942544/6300978111"; // TEST
+			string adUnitId = "ca-app-pub-2228911308495304/3436465445"; // LIVE
         #elif UNITY_IPHONE
             string adUnitId = "ca-app-pub-3940256099942544/2934735716"; // TEST
         #else
@@ -54,8 +54,8 @@ public class AdMobManager : MonoBehaviour {
 	private void RequestInterstitial()
 	{
 		#if UNITY_ANDROID
-			string adUnitId = "ca-app-pub-3940256099942544/1033173712"; // TEST
-			// string adUnitId = "ca-app-pub-2228911308495304/6203063735"; // LIVE
+			// string adUnitId = "ca-app-pub-3940256099942544/1033173712"; // TEST
+			string adUnitId = "ca-app-pub-2228911308495304/6203063735"; // LIVE
 		#elif UNITY_IPHONE
 			string adUnitId = "ca-app-pub-3940256099942544/4411468910"; // TEST
 		#else
